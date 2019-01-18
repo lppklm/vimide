@@ -27,7 +27,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle "tpope/vim-unimpaired"
 Bundle 'junegunn/vim-easy-align'
 Bundle 'rayburgemeestre/phpfolding.vim'
-Bundle "evanmiller/nginx-vim-syntax"
+"Bundle "evanmiller/nginx-vim-syntax"
 
 
 "--------------
