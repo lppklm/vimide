@@ -12,6 +12,7 @@ Bundle 'https://gameteam360@bitbucket.org/gameteam360/pylon_ide.git'
 Bundle "Lokaltog/vim-easymotion"
 
 Bundle 'fholgado/minibufexpl.vim'
+Bundle 'jistr/vim-nerdtree-tabs'
 
 "不知道有啥用
 Bundle 'Blackrush/vim-gocode'
