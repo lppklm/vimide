@@ -1,5 +1,6 @@
 " 引入需要的插件 "
-Bundle 'fatih/vim-go'
+Bundle 'fatih/vim-go' "语法高亮 语法检查
+Bundle 'Blackrush/vim-gocode' "代码补全
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 "Bundle 'editorconfig/editorconfig-vim'
@@ -15,7 +16,6 @@ Bundle 'fholgado/minibufexpl.vim'
 Bundle 'jistr/vim-nerdtree-tabs'
 
 "不知道有啥用
-Bundle 'Blackrush/vim-gocode'
 Plugin 'maksimr/vim-jsbeautify'
 Bundle "othree/html5.vim"
 Bundle 'ervandew/supertab'
