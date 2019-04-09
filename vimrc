@@ -112,6 +112,7 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 map <C-n> :MBEbf<CR>
 map <C-b> :MBEbb<CR>
+map <C-g> :pwd<CR>
 " F8启动golang
 noremap <F8> <Esc> :call GolangBuild() <CR> 
 let s:prjroot=fnamemodify('',':p')
