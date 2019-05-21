@@ -1,4 +1,5 @@
 set number "显示行号
+set mouse=a "支持鼠标
 set nocompatible "不模拟vi模式
 set tabstop=4 "tab代表4个空格
 " Show the next match while entering a search  实时搜索匹配
