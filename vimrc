@@ -45,7 +45,7 @@ filetype on "打开文件类型检测功能
 " 默认是否用 l 代替 o 打开文件"
 let g:vj_nerdtree_compatible = 1
 " NerdTree没有箭头"
-let g:NERDTreeDirArrows=0 
+let g:NERDTreeDirArrows=0
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -54,7 +54,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
 
-call vundle#end() 
+call vundle#end()
 " 引入vundle管理的插件文件,类似Gemfile "
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
@@ -73,7 +73,7 @@ filetype plugin indent on
 " --- END configure Vundle ---
 " 在 vim 启动的时候默认开启 NERDTree（autocmd 可以缩写为 au）
 "autocmd VimEnter * NERDTree
-" php和html文件的补全规则 输入的时候按ctrl+x 以及ctrl+o 
+" php和html文件的补全规则 输入的时候按ctrl+x 以及ctrl+o
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 "autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 "autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
@@ -114,7 +114,7 @@ map <C-n> :MBEbf<CR>
 map <C-b> :MBEbb<CR>
 map <C-g> :pwd<CR>
 " F8启动golang
-noremap <F8> <Esc> :call GolangBuild() <CR> 
+noremap <F8> <Esc> :call GolangBuild() <CR>
 let s:prjroot=fnamemodify('',':p')
 function GolangBuild()
     if filereadable(s:prjroot.'install')
@@ -165,8 +165,40 @@ map <F9> :!ctags --tag-relative=yes -f /xxx/www/wdurl_dev/wdurl/_prj/tags -R<CR>
 "set tags=tags; " ; 不可省略，表示若当前目录中不存在tags， 则在父目录中寻找。"
 set autochdir
 
-let g:miniBufExplMapWindowNavVim = 1   
-let g:miniBufExplMapWindowNavArrows = 1   
-let g:miniBufExplMapCTabSwitchBufs = 1   
-let g:miniBufExplModSelTarget = 1  
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
 let g:miniBufExplMoreThanOne=0
+
+" 设置tagbar的窗口宽度
+let g:tagbar_width=30
+" 映射Tagbar的快捷键,按F8自动打开
+map <F7> :TagbarToggle<CR>
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+\ }
