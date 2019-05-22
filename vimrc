@@ -203,3 +203,6 @@ let g:tagbar_type_go = {
     \ 'ctagsbin'  : 'gotags',
     \ 'ctagsargs' : '-sort -silent'
 \ }
+
+Plugin 'nsf/gocode', {'rtp': 'vim/'}
+Plugin 'jlanzarotta/bufexplorer'
