@@ -203,6 +203,7 @@ let g:tagbar_type_go = {
     \ 'ctagsbin'  : 'gotags',
     \ 'ctagsargs' : '-sort -silent'
 \ }
-
+nnoremap bm :<C-u>call gitblame#echo()<CR>
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'jlanzarotta/bufexplorer'
+Plugin 'zivyangll/git-blame.vim'
