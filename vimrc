@@ -176,6 +176,14 @@ let g:miniBufExplMoreThanOne=0
 let g:tagbar_width=30
 " 映射Tagbar的快捷键,按F8自动打开
 map <F7> :TagbarToggle<CR>
+map <F8> :call T1()<CR>
+map <F6> :call T2()<CR>
+func! T1()
+    set mouse=
+endf
+func! T2()
+    set mouse=a
+endf
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
     \ 'kinds'     : [
