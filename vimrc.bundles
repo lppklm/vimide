@@ -1,3 +1,4 @@
+"111
 " 引入需要的插件 "
 Bundle 'fatih/vim-go' "语法高亮 语法检查
 Bundle 'Blackrush/vim-gocode' "代码补全
