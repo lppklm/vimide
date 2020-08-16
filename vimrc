@@ -1,3 +1,4 @@
+"111
 set number "显示行号
 set mouse=a "支持鼠标
 set nocompatible "不模拟vi模式
